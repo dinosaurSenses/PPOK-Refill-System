@@ -26,5 +26,13 @@ namespace ppok_refill_system.UI.Controllers
 
             return View();
         }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Pharmacist()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }
